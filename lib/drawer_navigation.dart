@@ -12,7 +12,7 @@ class DrawerNavigation extends StatefulWidget {
   State<DrawerNavigation> createState() => _DrawerNavigationState();
 }
 
-class _DrawerNavigationState extends State<DrawerNavigation> {
+class _DrawerNavigationState extends State<DrawerNavigation> { 
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,21 +35,33 @@ class _DrawerNavigationState extends State<DrawerNavigation> {
               ),
             ),
             ListTile(
-              title: const Text('Quotes'),
+              title: const Text('Quotes',
+                style:TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               onTap: () {
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => PageViewQuotesText()));
               },
             ),
             ListTile(
-              title: const Text('Themes'),
+              title: const Text('Themes',
+                style:TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               onTap: () {
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => PageViewThemeText()));
               },
             ),
             ListTile(
-                title: const Text('Words'),
+                title: const Text('Words',
+                  style:TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 onTap: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(
@@ -61,6 +73,7 @@ class _DrawerNavigationState extends State<DrawerNavigation> {
                 'Personal Profile',
                 style: TextStyle(
                   fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
@@ -74,6 +87,7 @@ class _DrawerNavigationState extends State<DrawerNavigation> {
                     'Company Profile',
                 style: TextStyle(
                   fontSize: 20,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               onTap: () {
